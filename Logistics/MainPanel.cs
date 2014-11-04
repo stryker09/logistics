@@ -31,26 +31,34 @@ namespace Logistics
         }
 
 #region Begin
-        // Initialize variables
+        // Initialize _global_ variables
         String defaultLogDir = @"C:\Logistics";        
 
         private void logPull_Click(object sender, EventArgs e)
         {
-            // MAP INITIALIZATION
+            // Initialize variables for network mapping
             String customerServer = customerServerCBox.SelectedItem.ToString();
             String logsDate = logsDateTBox.Text;
             
-            // MAPMAPMAP
+            // Execute network drive mapping
             mapDrive(customerServer, logsDate);
 
+            // DEBUG 
             MessageBox.Show("Map complete?");
 
-            // COPY INITIALIZATION
+            // Initialize variables for file transfer
             
 
-            // COPYCOPYCOPY
+            // Execute file transfer
+
+            
+            // Initialize variables for Filezilla upload to FTP
+
+            
+            // Execute Filezilla FTP upload
 
 
+            // DEBUG
             MessageBox.Show("Copy complete?");
 
             // Unmap all the drives
