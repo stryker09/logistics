@@ -52,10 +52,10 @@ namespace Logistics
             // Execute file transfer
 
             
-            // Initialize variables for Filezilla upload to FTP
+            // Initialize variables for upload to FTP
 
             
-            // Execute Filezilla FTP upload
+            // Execute FTP upload
 
 
             // DEBUG
