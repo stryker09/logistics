@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.logsDateTBox = new System.Windows.Forms.TextBox();
+            this.selectLocalLogFolderBT = new System.Windows.Forms.Button();
             this.logPull = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.logsDatePicker = new System.Windows.Forms.DateTimePicker();
@@ -42,13 +42,14 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuBarFile = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localLogBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.logsDateTBox);
+            this.panel1.Controls.Add(this.selectLocalLogFolderBT);
             this.panel1.Controls.Add(this.logPull);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.logsDatePicker);
@@ -63,12 +64,15 @@
             this.panel1.Size = new System.Drawing.Size(912, 113);
             this.panel1.TabIndex = 0;
             // 
-            // logsDateTBox
+            // selectLocalLogFolderBT
             // 
-            this.logsDateTBox.Location = new System.Drawing.Point(414, 55);
-            this.logsDateTBox.Name = "logsDateTBox";
-            this.logsDateTBox.Size = new System.Drawing.Size(162, 20);
-            this.logsDateTBox.TabIndex = 3;
+            this.selectLocalLogFolderBT.Location = new System.Drawing.Point(290, 19);
+            this.selectLocalLogFolderBT.Name = "selectLocalLogFolderBT";
+            this.selectLocalLogFolderBT.Size = new System.Drawing.Size(23, 23);
+            this.selectLocalLogFolderBT.TabIndex = 11;
+            this.selectLocalLogFolderBT.Text = "...";
+            this.selectLocalLogFolderBT.UseVisualStyleBackColor = true;
+            this.selectLocalLogFolderBT.Click += new System.EventHandler(this.selectLocalLogFolderBT_Click);
             // 
             // logPull
             // 
@@ -91,11 +95,10 @@
             // 
             // logsDatePicker
             // 
-            this.logsDatePicker.Location = new System.Drawing.Point(414, 90);
+            this.logsDatePicker.Location = new System.Drawing.Point(414, 55);
             this.logsDatePicker.Name = "logsDatePicker";
             this.logsDatePicker.Size = new System.Drawing.Size(200, 20);
             this.logsDatePicker.TabIndex = 8;
-            this.logsDatePicker.ValueChanged += new System.EventHandler(this.logsDatePicker_ValueChanged);
             // 
             // customerServerCBox
             // 
@@ -185,6 +188,10 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // localLogBrowser
+            // 
+            this.localLogBrowser.RootFolder = System.Environment.SpecialFolder.MyComputer;
+            // 
             // MainPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,7 +227,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker logsDatePicker;
         private System.Windows.Forms.Button logPull;
-        private System.Windows.Forms.TextBox logsDateTBox;
+        private System.Windows.Forms.Button selectLocalLogFolderBT;
+        private System.Windows.Forms.FolderBrowserDialog localLogBrowser;
 
     }
 }
